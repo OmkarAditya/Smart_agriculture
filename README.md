@@ -12,6 +12,7 @@ CIRCUIT:
 ![circuit](https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/8e0efea8-231e-418e-bc86-2098eb33d771)
 
 METHODOLOGY:
+
 1. CIRCUIT EXPLANATION
 
 We are using 3 sensors to print 4 data temperature humidity, gas readings and soil moisture. Data is dynamically feeded to the thingspeak which further sends to our website
@@ -23,6 +24,7 @@ https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/cc0f04cd-294c-
 
 
 2. DYNAMIC FEEDING OF DATA TO OUR WEBSITE
+   
    Data is dynamically feeded to the thingspeak which further sends to our website
 
 https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/30f416da-5a30-4c4e-b805-676ef628c96f
@@ -35,5 +37,6 @@ Our Thingspeak data:
 
 
 Website:
+
 ![website1](https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/5436084c-c00b-4f81-a687-0643a8329b21)
 ![website2](https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/5d0b7003-2a9c-4954-b6d8-5ad2d8e2b9a8)
