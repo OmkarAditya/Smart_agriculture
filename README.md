@@ -13,7 +13,11 @@ METHODOLOGY:
 1. CIRCUIT EXPLANATION
 
 We are using 3 sensors to print 4 data temperature humidity, gas readings and soil moisture. Data is dynamically feeded to the thingspeak which further sends to our website
-https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/21980833-f18a-4b7b-a7a8-ae0f3160134d
+
+
+https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/cc0f04cd-294c-4d44-9b12-7c34304c822f
+
+
 
 
 2. DYNAMIC FEEDING OF DATA TO OUR WEBSITE
