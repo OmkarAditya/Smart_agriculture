@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Monitoring</title>
+    <style>
+        /* CSS styles omitted for brevity */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Condition Display</h1>
+        <div id="data-top" style="text-align: center;">
+            <p id="weightX">soil_moisture: Loading...</p>
+            <p id="weightY">temperature: Loading...</p>
+            <p id="weightZ">humidity: Loading...</p>
+            <p id="weightA">gas_readings: Loading...</p> <!-- Added the fourth field -->
+        </div>
+        <p>Welcome to our Weather monitoring system. Stay up-to-date with the latest home-condition measurements.</p>
+        <div class="data-container">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2217592/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+        <div class="data-container">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2217592/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+        </div>
+        <div class="data-container">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2217592/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+        </div>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2217592/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+        <div class="data-container">
+        </div> <!-- Added the fourth data container -->
+        <p>Note: The graphs display the condition measurements over time for fields soil_moisture, temperature, humidity, gas_readings.</p>
+    </div>
+
+    <script>
+        // Configure ThingSpeak
+        var apiKey = 'F4R9AC0W764Z3849';  // Replace with your ThingSpeak API key
+        var channelId = '2217592';  // Replace with your ThingSpeak channel ID
+
+        // Fetch the latest weight value from ThingSpeak for Field X
+        function fetchWeightX() {
+            var url = 'https://api.thingspeak.com/channels/' + channelId + '/fields/1/last.json?api_key=' + apiKey;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Extract the weight value from the JSON response
+                    var weightValue = data.field1;
+
+                    // Display the weight value on the webpage
+                    var weightElement = document.getElementById('weightX');
+                    weightElement.textContent = 'MOISTURE PERCENT: ' + weightValue;
+                    
+                    // Fetch the weight value again after 5 seconds
+                    setTimeout(fetchWeightX, 5000);
+                })
+                .catch(error => {mentById('weightX');
+                    console.log('Error:', error);
+                });
+        }
+
+        // Fetch the latest weight value from ThingSpeak for Field Y
+        function fetchWeightY() {
+            var url = 'https://api.thingspeak.com/channels/' + channelId + '/fields/2/last.json?api_key=' + apiKey;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Extract the weight value from the JSON response
+                    var weightValue = data.field2;
+
+                    // Display the weight value on the webpage
+                    var weightElement = document.getElementById('weightY');
+                    weightElement.textContent = 'TEMPERATURE: ' + weightValue;
+
+                    // Fetch the weight value again after 5 seconds
+                    setTimeout(fetchWeightY, 5000);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                });
+        }
+
+        // Fetch the latest weight value from ThingSpeak for Field Z
+        function fetchWeightZ() {
+            var url = 'https://api.thingspeak.com/channels/' + channelId + '/fields/3/last.json?api_key=' + apiKey;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Extract the weight value from the JSON response
+                    var weightValue = data.field3;
+
+                    // Display the weight value on the webpage
+                    var weightElement = document.getElementById('weightZ');
+                    weightElement.textContent = 'HUMIDITY: ' + weightValue;
+
+                    // Fetch the weight value again after 5 seconds
+                    setTimeout(fetchWeightZ, 5000);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                });
+        }
+
+        // Fetch the latest weight value from ThingSpeak for Field A
+        function fetchWeightA() {
+            var url = 'https://api.thingspeak.com/channels/' + channelId + '/fields/4/last.json?api_key=' + apiKey;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Extract the weight value from the JSON response
+                    var weightValue = data.field4;
+
+                    // Display the weight value on the webpage
+                    var weightElement = document.getElementById('weightA');
+                    weightElement.textContent = 'GAS: ' + weightValue;
+
+                    // Fetch the weight value again after 5 seconds
+                    setTimeout(fetchWeightA, 5000);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                });
+        }
+
+        // Initial fetch of weight values
+        fetchWeightX();
+        fetchWeightY();
+        fetchWeightZ();
+        fetchWeightA(); // Call the new function for fetching the fourth field
+    </script>
+</body>
+</html>
