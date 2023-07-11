@@ -18,7 +18,10 @@ https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/21980833-f18a-
 
 2. DYNAMIC FEEDING OF DATA TO OUR WEBSITE
    Data is dynamically feeded to the thingspeak which further sends to our website
-https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/1caf805e-231b-46c2-a65b-9d1549465c28
+
+https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/30f416da-5a30-4c4e-b805-676ef628c96f
+
+
 
 
 Our Thingspeak data:
