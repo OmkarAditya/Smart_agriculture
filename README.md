@@ -3,8 +3,9 @@ A SMART AGRICULTURE MONITORING SYSTEM(USING ARDUINO AND PYTHON) WHICH DETECTS HU
 
 Note: Before using the arduino code install the DHTLib zip file and add it in the arduino in sketches-include library-add zip file-
 
-COMPONENTS: arduino, breadboard,dht11 sensor,mq135,soil moisture sensor, 
-SOFTWARE: Arduino, thingspeak, python, 
+COMPONENTS: arduino, breadboard,dht11 sensor,mq135,soil moisture sensor 
+SOFTWARE: Arduino, thingspeak, python 
+
 CIRCUIT:
 
 ![circuit](https://github.com/OmkarAditya/Smart_agriculture/assets/108687318/8e0efea8-231e-418e-bc86-2098eb33d771)
